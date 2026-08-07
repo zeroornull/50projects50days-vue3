@@ -1,19 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      redirect: '/day01',
     },
     {
-      path: '/about',
-      name: 'about',
-      // Keep secondary pages out of the initial bundle.
-      component: () => import('../views/AboutView.vue'),
+      path: '/day01',
+      name: 'day01',
+      meta: {
+        title: 'Expanding Cards',
+      },
+      component: () => import('~/views/Day01_ExpandingCards/index.vue'),
     },
   ],
 })
