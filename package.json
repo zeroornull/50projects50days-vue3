@@ -15,7 +15,10 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
-    "vue": "^3.5.40",
+    "@types/mockjs": "^1.0.10",
+    "dayjs": "^1.11.21",
+    "mockjs": "1.1.0",
+    "vue": "3.6.0-rc.2",
     "vue-router": "^5.2.0"
   },
   "devDependencies": {
