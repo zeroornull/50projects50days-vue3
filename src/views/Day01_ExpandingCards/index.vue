@@ -35,7 +35,7 @@ const cardList = ref<CardItem[]>([
 
 function toggleActive(index: number) {
   cardList.value.forEach((item, i) => {
-    item.active = (i === index)
+    item.active = i === index
   })
 }
 </script>
@@ -43,8 +43,10 @@ function toggleActive(index: number) {
 <template>
   <div class="container base_container">
     <div
-      v-for="({ url, title, active }, idx) in cardList" :key="title"
-      class="panel" :class="[active ? 'active' : '']"
+      v-for="({ url, title, active }, idx) in cardList"
+      :key="title"
+      class="panel"
+      :class="[active ? 'active' : '']"
       :style="{
         backgroundImage: `url(${url})`,
       }"

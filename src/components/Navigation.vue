@@ -16,15 +16,12 @@ const nextRoute = computed(() => projectRoutes[currentRouteIdx.value + 1])
 const totalProjects = projectRoutes.length
 
 const currentProjectNumber = computed(() => {
-  if (currentRouteIdx.value < 0)
-    return 1
+  if (currentRouteIdx.value < 0) return 1
 
   return currentRouteIdx.value + 1
 })
 
-const progress = computed(() => (
-  totalProjects > 0 ? currentProjectNumber.value / totalProjects : 0
-))
+const progress = computed(() => (totalProjects > 0 ? currentProjectNumber.value / totalProjects : 0))
 
 const previousTitle = computed(() => {
   const title = previousRoute.value?.meta?.title
@@ -38,14 +35,12 @@ const nextTitle = computed(() => {
 
 function goPrev() {
   const prev = previousRoute.value
-  if (prev)
-    router.push(prev.path)
+  if (prev) router.push(prev.path)
 }
 
 function goNext() {
   const next = nextRoute.value
-  if (next)
-    router.push(next.path)
+  if (next) router.push(next.path)
 }
 </script>
 
@@ -76,10 +71,7 @@ function goNext() {
         <span>/ {{ String(totalProjects).padStart(2, '0') }}</span>
       </span>
       <span class="navigation__track" aria-hidden="true">
-        <span
-          class="navigation__progress"
-          :style="{ transform: `scaleX(${progress})` }"
-        />
+        <span class="navigation__progress" :style="{ transform: `scaleX(${progress})` }" />
       </span>
     </div>
 

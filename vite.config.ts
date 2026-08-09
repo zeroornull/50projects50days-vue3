@@ -12,10 +12,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-      ],
+      imports: ['vue', 'vue-router'],
       dts: 'types/auto-imports.d.ts',
     }),
     Components({

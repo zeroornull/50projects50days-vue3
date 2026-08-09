@@ -1,5 +1,8 @@
 <script setup lang="ts" vapor>
-interface Item { id: number, active: boolean }
+interface Item {
+  id: number
+  active: boolean
+}
 const circles = reactive<Item[]>([
   { id: 1, active: true },
   { id: 2, active: false },
@@ -13,16 +16,14 @@ const activesWidth = ref(0)
 
 function prev() {
   currentActive.value--
-  if (currentActive.value < 0)
-    currentActive.value = 0
+  if (currentActive.value < 0) currentActive.value = 0
 
   update()
 }
 
 function next() {
   currentActive.value++
-  if (currentActive.value > circles.length)
-    currentActive.value = circles.length
+  if (currentActive.value > circles.length) currentActive.value = circles.length
   update()
 }
 
@@ -46,12 +47,8 @@ function update() {
       </div>
     </div>
     <div class="btns">
-      <button id="prev" class="btn" :disabled="currentActive === 1" @click="prev">
-        Prev
-      </button>
-      <button id="next" class="btn" :disabled="currentActive === circles.length" @click="next">
-        Next
-      </button>
+      <button id="prev" class="btn" :disabled="currentActive === 1" @click="prev">Prev</button>
+      <button id="next" class="btn" :disabled="currentActive === circles.length" @click="next">Next</button>
     </div>
   </div>
 </template>
