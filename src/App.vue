@@ -1,9 +1,5 @@
-<script setup lang="ts">
-const route = useRoute()
-</script>
-
 <template>
-  <div v-if="route.path !== '/day06'" class="layout">
+  <div v-if="$route.path !== '/day06'" class="layout">
     <main class="base-main-h">
       <router-view v-slot="{ Component }">
         <transition name="nested">

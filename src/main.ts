@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 import { createApp, vaporInteropPlugin } from 'vue'
 import App from './App.vue'
 
-import router from './router'
+import { router } from './router'
 import './styles/init.css'
 import './mock'
 
