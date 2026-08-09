@@ -48,3 +48,10 @@ __screenshots__/
 # Local tooling state
 .codebase-memory/
 .omx/
+
+# Local deployment configuration
+/.dockerignore
+/Dockerfile
+/deploy/
+/pnpm-workspace.yaml
+/scripts/cicd.sh

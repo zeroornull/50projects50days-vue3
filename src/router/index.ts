@@ -47,6 +47,38 @@ export const routes = [
       },
     ],
   },
+  {
+    path: '/day04',
+    name: 'day04',
+    meta: {
+      title: 'Hidden Search Widget',
+    },
+    component: () => import('~/views/Day04_HiddenSearchWidget/index.vue'),
+  },
+  {
+    path: '/day05',
+    name: 'day05',
+    meta: {
+      title: 'Blurry Loading',
+    },
+    component: () => import('~/views/Day05_BlurryLoading/index.vue'),
+  },
+  {
+    path: '/day06',
+    name: 'day06',
+    meta: {
+      title: 'Scroll Animation',
+    },
+    component: () => import('~/views/Day06_ScrollAnimation/index.vue'),
+  },
+  {
+    path: '/day07',
+    name: 'day07',
+    meta: {
+      title: 'Split Landing Page',
+    },
+    component: () => import('~/views/Day07_SplitLandingPage/index.vue'),
+  },
 ]
 
 export const router = createRouter({
