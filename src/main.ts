@@ -6,9 +6,16 @@ import { router } from './router'
 import './styles/init.css'
 import './mock'
 
-router.beforeEach((to, _, next) => {
-  globalThis.document.title = `${to.meta.title}`
-  next()
+const DEFAULT_DOCUMENT_TITLE = '50 Projects'
+
+router.afterEach((to, _, failure) => {
+  if (failure)
+    return
+
+  const title = to.meta.title
+  globalThis.document.title = typeof title === 'string' && title.trim()
+    ? title
+    : DEFAULT_DOCUMENT_TITLE
 })
 
 const app = createApp(App)
