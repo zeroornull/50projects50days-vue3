@@ -115,6 +115,38 @@ export const routes = [
     },
     component: () => import('~/views/Day11_EventKeyCodes/index.vue'),
   },
+  {
+    path: '/day12',
+    name: 'day12',
+    meta: {
+      title: 'Faq Collapse',
+    },
+    component: () => import('~/views/Day12_FaqCollapse/index.vue'),
+  },
+  {
+    path: '/day13',
+    name: 'day13',
+    meta: {
+      title: 'Random Choice Picker',
+    },
+    component: () => import('~/views/Day13_RandomChoicePicker/index.vue'),
+  },
+  {
+    path: '/day14',
+    name: 'day14',
+    meta: {
+      title: 'Animated Navigation',
+    },
+    component: () => import('~/views/Day14_AnimatedNavigation/index.vue'),
+  },
+  {
+    path: '/day15',
+    name: 'day15',
+    meta: {
+      title: 'Incrementing Counter',
+    },
+    component: () => import('~/views/Day15_IncrementingCounter/index.vue'),
+  },
 ]
 
 export const router = createRouter({
