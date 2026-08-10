@@ -147,6 +147,22 @@ export const routes = [
     },
     component: () => import('~/views/Day15_IncrementingCounter/index.vue'),
   },
+  {
+    path: '/day16',
+    name: 'day16',
+    meta: {
+      title: 'Drink Water',
+    },
+    component: () => import('~/views/Day16_DrinkWater/index.vue'),
+  },
+  {
+    path: '/day17',
+    name: 'day17',
+    meta: {
+      title: 'Movie App',
+    },
+    component: () => import('~/views/Day17_MovieApp/index.vue'),
+  },
 ]
 
 export const router = createRouter({
