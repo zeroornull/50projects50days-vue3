@@ -14,9 +14,10 @@ function checkBoxes() {
   const boxs = document.querySelectorAll('.box')
   const triggerBottom = (window.innerHeight / 5) * 4
 
-  boxs.forEach(box => {
+  boxs.forEach((box) => {
     const boxTop = box.getBoundingClientRect().top
-    if (boxTop < triggerBottom) box.classList.add('show')
+    if (boxTop < triggerBottom)
+      box.classList.add('show')
     else box.classList.remove('show')
   })
 }
@@ -32,8 +33,12 @@ const router = useRouter()
     </div>
 
     <div class="pagenation">
-      <button @click="router.push('/day05')"><i class="fas fa-arrow-left" />&nbsp; 上一页</button>
-      <button @click="router.push('/day07')">下一页 &nbsp;<i class="fas fa-arrow-right" /></button>
+      <button @click="router.push('/day05')">
+        <i class="fas fa-arrow-left" />&nbsp; 上一页
+      </button>
+      <button @click="router.push('/day07')">
+        下一页 &nbsp;<i class="fas fa-arrow-right" />
+      </button>
     </div>
   </div>
 </template>

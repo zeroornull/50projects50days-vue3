@@ -13,7 +13,7 @@
     </p>
 
     <h3>Img03</h3>
-    <img src="../../../assets/imgs/008.jpg" alt="error" />
+    <img src="../../../assets/imgs/008.jpg" alt="error">
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit libero deleniti rerum quo, incidunt vel consequatur
       culpa ullam. Magnam facere earum unde harum. Ea culpa veritatis magnam at aliquid. Perferendis totam placeat

@@ -10,7 +10,8 @@ import './mock'
 const DEFAULT_DOCUMENT_TITLE = '50 Projects'
 
 router.afterEach((to, _, failure) => {
-  if (failure) return
+  if (failure)
+    return
 
   const title = to.meta.title
   globalThis.document.title = typeof title === 'string' && title.trim() ? title : DEFAULT_DOCUMENT_TITLE

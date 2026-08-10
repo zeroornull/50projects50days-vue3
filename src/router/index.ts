@@ -28,22 +28,26 @@ export const routes = [
     meta: {
       title: 'Rotating Navigation Animation',
     },
-    component: () => import('~/views/Day03_RotatingNavigationAnimation/index.vue'),
+    component: () =>
+      import('~/views/Day03_RotatingNavigationAnimation/index.vue'),
     children: [
       {
         path: 'page01',
         name: 'page01',
-        component: () => import('~/views/Day03_RotatingNavigationAnimation/pages/Page01.vue'),
+        component: () =>
+          import('~/views/Day03_RotatingNavigationAnimation/pages/Page01.vue'),
       },
       {
         path: 'page02',
         name: 'page02',
-        component: () => import('~/views/Day03_RotatingNavigationAnimation/pages/Page02.vue'),
+        component: () =>
+          import('~/views/Day03_RotatingNavigationAnimation/pages/Page02.vue'),
       },
       {
         path: 'page03',
         name: 'page03',
-        component: () => import('~/views/Day03_RotatingNavigationAnimation/pages/Page03.vue'),
+        component: () =>
+          import('~/views/Day03_RotatingNavigationAnimation/pages/Page03.vue'),
       },
     ],
   },
@@ -78,6 +82,38 @@ export const routes = [
       title: 'Split Landing Page',
     },
     component: () => import('~/views/Day07_SplitLandingPage/index.vue'),
+  },
+  {
+    path: '/day08',
+    name: 'day08',
+    meta: {
+      title: 'Form Input Wave',
+    },
+    component: () => import('~/views/Day08_FormInputWave/index.vue'),
+  },
+  {
+    path: '/day09',
+    name: 'day09',
+    meta: {
+      title: 'Sound Board',
+    },
+    component: () => import('~/views/Day09_SoundBoard/index.vue'),
+  },
+  {
+    path: '/day10',
+    name: 'day10',
+    meta: {
+      title: 'Dad Jokes',
+    },
+    component: () => import('~/views/Day10_DadJokes/index.vue'),
+  },
+  {
+    path: '/day11',
+    name: 'day11',
+    meta: {
+      title: 'Event KeyCodes',
+    },
+    component: () => import('~/views/Day11_EventKeyCodes/index.vue'),
   },
 ]
 

@@ -16,7 +16,8 @@ const nextRoute = computed(() => projectRoutes[currentRouteIdx.value + 1])
 const totalProjects = projectRoutes.length
 
 const currentProjectNumber = computed(() => {
-  if (currentRouteIdx.value < 0) return 1
+  if (currentRouteIdx.value < 0)
+    return 1
 
   return currentRouteIdx.value + 1
 })
@@ -35,12 +36,14 @@ const nextTitle = computed(() => {
 
 function goPrev() {
   const prev = previousRoute.value
-  if (prev) router.push(prev.path)
+  if (prev)
+    router.push(prev.path)
 }
 
 function goNext() {
   const next = nextRoute.value
-  if (next) router.push(next.path)
+  if (next)
+    router.push(next.path)
 }
 </script>
 

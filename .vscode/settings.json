@@ -3,17 +3,51 @@
   "explorer.fileNesting.patterns": {
     "tsconfig.json": "tsconfig.*.json, env.d.ts, typed-router.d.ts",
     "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
-    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, commitlint.config.*, .oxlint*, oxlint*, .oxfmt*, oxfmt*, .editorconfig, bun.lock"
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, commitlint.config.*, eslint.config.*, oxlint.config.*, .editorconfig, bun.lock"
   },
-  "editor.defaultFormatter": "oxc.oxc-vscode",
-  "editor.formatOnSave": false,
-  // 保存时先由 Oxfmt 格式化，再应用 Oxlint 的安全修复。
-  "editor.codeActionsOnSave": {
-    "source.format.oxc": "always",
-    "source.fixAll.oxc": "always"
-  },
-  "oxc.enable.oxfmt": true,
+  "oxc.enable.oxfmt": false,
   "oxc.enable.oxlint": true,
-  "oxc.fmt.configPath": ".oxfmtrc.json",
-  "oxc.requireConfig": true
+  "oxc.requireConfig": true,
+  "oxc.lint.run": "onSave",
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.oxc": "always",
+    "source.organizeImports": "never"
+  },
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off", "fixable": true },
+    { "rule": "format/*", "severity": "off", "fixable": true },
+    { "rule": "*-indent", "severity": "off", "fixable": true },
+    { "rule": "*-spacing", "severity": "off", "fixable": true },
+    { "rule": "*-spaces", "severity": "off", "fixable": true },
+    { "rule": "*-order", "severity": "off", "fixable": true },
+    { "rule": "*-dangle", "severity": "off", "fixable": true },
+    { "rule": "*-newline", "severity": "off", "fixable": true },
+    { "rule": "*quotes", "severity": "off", "fixable": true },
+    { "rule": "*semi", "severity": "off", "fixable": true }
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ],
+  "eslint.run": "onSave"
 }

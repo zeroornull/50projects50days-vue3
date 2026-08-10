@@ -7,7 +7,8 @@ const timer = setInterval(blurring, 30)
 
 function blurring() {
   load.value++
-  if (load.value > 99) clearInterval(timer)
+  if (load.value > 99)
+    clearInterval(timer)
   loading.value.style.opacity = scale(load.value, 0, 100, 1, 0)
   bg.value.style.filter = `blur(${scale(load.value, 0, 100, 30, 0)}px)`
 }
@@ -21,7 +22,9 @@ onUnmounted(() => clearInterval(timer))
 <template>
   <div class="base_container container">
     <div ref="bg" class="body" :style="{ backgroundImage: `url(${url})` }" />
-    <div ref="loading" class="loading-text">{{ load }}%</div>
+    <div ref="loading" class="loading-text">
+      {{ load }}%
+    </div>
   </div>
 </template>
 

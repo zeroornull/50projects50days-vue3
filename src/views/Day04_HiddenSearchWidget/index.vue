@@ -12,7 +12,7 @@ function handleSearchBar() {
 <template>
   <div class="body base_container">
     <div class="search" :class="[showSearchBar ? 'active' : '']">
-      <input ref="input" type="text" class="input" placeholder="Search..." />
+      <input ref="input" type="text" class="input" placeholder="Search...">
       <button class="btn" @click="handleSearchBar">
         <i class="fas fa-search" />
       </button>
