@@ -388,6 +388,23 @@ export const routes = [
     component: () =>
       import('~/views/Day45_NetflixMobileNavigation/index.vue'),
   },
+  {
+    path: '/day46',
+    name: 'day46',
+    meta: {
+      title: 'Quiz App',
+    },
+    component: () => import('~/views/Day46_QuizApp/index.vue'),
+  },
+  {
+    path: '/day47',
+    name: 'day47',
+    meta: {
+      title: 'Testimonial Box Switcher',
+    },
+    component: () =>
+      import('~/views/Day47_TestimonialBoxSwitcher/index.vue'),
+  },
 ]
 
 export const router = createRouter({
