@@ -405,6 +405,38 @@ export const routes = [
     component: () =>
       import('~/views/Day47_TestimonialBoxSwitcher/index.vue'),
   },
+  {
+    path: '/day48',
+    name: 'day48',
+    meta: {
+      title: 'Random Image Feed',
+    },
+    component: () => import('~/views/Day48_RandomImageFeed/index.vue'),
+  },
+  {
+    path: '/day49',
+    name: 'day49',
+    meta: {
+      title: 'ToToList',
+    },
+    component: () => import('~/views/Day49_ToDoList/index.vue'),
+  },
+  {
+    path: '/day50',
+    name: 'day50',
+    meta: {
+      title: 'Insect Catch Game',
+    },
+    component: () => import('~/views/Day50_InsectCatchGame/index.vue'),
+  },
+  {
+    path: '/day51',
+    name: 'day51',
+    meta: {
+      title: 'Gluttonous Snake',
+    },
+    component: () => import('~/views/Day51_GluttonousSnake/index.vue'),
+  },
 ]
 
 export const router = createRouter({

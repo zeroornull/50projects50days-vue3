@@ -1,5 +1,9 @@
 import service from '~/api/request'
 
+interface PicsumImage {
+  id: string
+}
+
 export function getJokes(): Promise<{ joke: string }> {
   return service({
     url: 'https://icanhazdadjoke.com',
@@ -29,8 +33,11 @@ export function getUserList() {
   return service('/mock/getuserlist')
 }
 
-export function getRandomImg() {
-  return service(
-    'https://shibe.online/api/shibes?count=30&urls=true&httpsUrls=true',
+export async function getRandomImg(): Promise<string[]> {
+  const page = Math.floor(Math.random() * 30) + 1
+  const images = await service.get<PicsumImage[], PicsumImage[]>(
+    `https://picsum.photos/v2/list?page=${page}&limit=30`,
   )
+
+  return images.map(({ id }) => `https://picsum.photos/id/${id}/300/300`)
 }
