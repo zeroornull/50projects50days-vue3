@@ -339,6 +339,55 @@ export const routes = [
     },
     component: () => import('~/views/Day39_PasswordStrengthBackground/index.vue'),
   },
+  {
+    path: '/day40',
+    name: 'day40',
+    meta: {
+      title: '3d Background Boxes',
+    },
+    component: () => import('~/views/Day40_3dBackgroundBoxes/index.vue'),
+  },
+  {
+    path: '/day41',
+    name: 'day41',
+    meta: {
+      title: 'Verify Account Ui',
+    },
+    component: () => import('~/views/Day41_VerifyAccountUi/index.vue'),
+  },
+  {
+    path: '/day42',
+    name: 'day42',
+    meta: {
+      title: 'Live User Filter',
+    },
+    component: () => import('~/views/Day42_LiveUserFilter/index.vue'),
+  },
+  {
+    path: '/day43',
+    name: 'day43',
+    meta: {
+      title: 'Feedback Ui Design',
+    },
+    component: () => import('~/views/Day43_FeedbackUiDesign/index.vue'),
+  },
+  {
+    path: '/day44',
+    name: 'day44',
+    meta: {
+      title: 'Custom Range Slider',
+    },
+    component: () => import('~/views/Day44_CustomRangeSlider/index.vue'),
+  },
+  {
+    path: '/day45',
+    name: 'day45',
+    meta: {
+      title: 'Netflix Mobile Navigation',
+    },
+    component: () =>
+      import('~/views/Day45_NetflixMobileNavigation/index.vue'),
+  },
 ]
 
 export const router = createRouter({

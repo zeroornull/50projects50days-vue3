@@ -20,3 +20,17 @@ export function getUserRepos(username: string) {
     method: 'GET',
   })
 }
+
+export function getItemList() {
+  return service('https://randomuser.me/api?results=50')
+}
+
+export function getUserList() {
+  return service('/mock/getuserlist')
+}
+
+export function getRandomImg() {
+  return service(
+    'https://shibe.online/api/shibes?count=30&urls=true&httpsUrls=true',
+  )
+}
