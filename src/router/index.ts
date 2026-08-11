@@ -195,6 +195,54 @@ export const routes = [
     },
     component: () => import('~/views/Day21_DragNDrop/index.vue'),
   },
+  {
+    path: '/day22',
+    name: 'day22',
+    meta: {
+      title: 'Drawing App',
+    },
+    component: () => import('~/views/Day22_DrawingApp/index.vue'),
+  },
+  {
+    path: '/day23',
+    name: 'day23',
+    meta: {
+      title: 'Kinetic Loader',
+    },
+    component: () => import('~/views/Day23_KineticLoader/index.vue'),
+  },
+  {
+    path: '/day24',
+    name: 'day24',
+    meta: {
+      title: 'Content Placeholder',
+    },
+    component: () => import('~/views/Day24_ContentPlaceholder/index.vue'),
+  },
+  {
+    path: '/day25',
+    name: 'day25',
+    meta: {
+      title: 'Sticky Navigation',
+    },
+    component: () => import('~/views/Day25_StickyNavigation/index.vue'),
+  },
+  {
+    path: '/day26',
+    name: 'day26',
+    meta: {
+      title: 'Double Vertical Slider',
+    },
+    component: () => import('~/views/Day26_DoubleVerticalSlider/index.vue'),
+  },
+  {
+    path: '/day27',
+    name: 'day27',
+    meta: {
+      title: 'Toast Notification',
+    },
+    component: () => import('~/views/Day27_ToastNotification/index.vue'),
+  },
 ]
 
 export const router = createRouter({
