@@ -275,6 +275,38 @@ export const routes = [
     },
     component: () => import('~/views/Day31_PasswordGenerator/index.vue'),
   },
+  {
+    path: '/day32',
+    name: 'day32',
+    meta: {
+      title: 'Good Cheap Fast',
+    },
+    component: () => import('~/views/Day32_GoodCheapFast/index.vue'),
+  },
+  {
+    path: '/day33',
+    name: 'day33',
+    meta: {
+      title: 'Notes App',
+    },
+    component: () => import('~/views/Day33_NotesApp/index.vue'),
+  },
+  {
+    path: '/day34',
+    name: 'day34',
+    meta: {
+      title: 'Animated Countdown',
+    },
+    component: () => import('~/views/Day34_AnimatedCountdown/index.vue'),
+  },
+  {
+    path: '/day35',
+    name: 'day35',
+    meta: {
+      title: 'Image Carousel',
+    },
+    component: () => import('~/views/Day35_ImageCarousel/index.vue'),
+  },
 ]
 
 export const router = createRouter({
