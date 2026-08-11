@@ -1,6 +1,5 @@
 <script setup lang="ts" vapor>
 import type { VNodeRef } from 'vue'
-import { nanoid } from 'nanoid'
 
 interface TodoItem {
   id: string
@@ -18,7 +17,7 @@ onMounted(() => todoList.value = getToDoList())
 function addToDoItem() {
   if (todo.value) {
     const todoItem: TodoItem = {
-      id: nanoid(),
+      id: crypto.randomUUID(),
       haveDone: false,
       text: todo.value,
     }

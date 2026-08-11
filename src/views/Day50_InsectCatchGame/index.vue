@@ -1,6 +1,5 @@
 <script setup lang="ts" vapor>
 import type { VNodeRef } from 'vue'
-import { nanoid } from 'nanoid'
 
 interface InsectItem {
   id: string
@@ -24,10 +23,10 @@ const curInsect = ref<InsectItem>({
 
 const gameContainer = ref<VNodeRef>()
 const insectsList: InsectItem[] = [
-  { id: nanoid(), name: 'Fly', src: 'http://pngimg.com/uploads/fly/fly_PNG3946.png', alt: 'fly' },
-  { id: nanoid(), name: 'Mosquito', src: 'http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png', alt: 'mosquito' },
-  { id: nanoid(), name: 'Spider', src: 'http://pngimg.com/uploads/spider/spider_PNG12.png', alt: 'spider' },
-  { id: nanoid(), name: 'Roach', src: 'http://pngimg.com/uploads/roach/roach_PNG12163.png', alt: 'roach' },
+  { id: 'fly', name: 'Fly', src: 'http://pngimg.com/uploads/fly/fly_PNG3946.png', alt: 'fly' },
+  { id: 'mosquito', name: 'Mosquito', src: 'http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png', alt: 'mosquito' },
+  { id: 'spider', name: 'Spider', src: 'http://pngimg.com/uploads/spider/spider_PNG12.png', alt: 'spider' },
+  { id: 'roach', name: 'Roach', src: 'http://pngimg.com/uploads/roach/roach_PNG12163.png', alt: 'roach' },
 ]
 
 function startGame(insert: InsectItem) {

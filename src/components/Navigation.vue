@@ -127,6 +127,7 @@ function goNext() {
   height: 100px;
   padding: 12px clamp(12px, 2.5vw, 32px);
   gap: clamp(8px, 1.5vw, 16px);
+  overflow: hidden;
   overflow: clip;
   color: var(--nav-ink);
   background: var(--nav-background);
@@ -147,6 +148,8 @@ function goNext() {
   color: var(--nav-ink);
   font: inherit;
   text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   background: var(--nav-surface);
   border: 1px solid var(--nav-border);
   border-radius: var(--nav-radius);
@@ -287,11 +290,19 @@ function goNext() {
 
 @media (max-width: 540px) {
   .navigation {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    height: auto;
+    min-height: 100px;
     padding-inline: 8px;
+    padding-block: 10px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
     gap: 8px;
   }
 
   .navigation__action {
+    min-height: 56px;
     padding-inline: 8px;
     gap: 8px;
   }
