@@ -307,6 +307,38 @@ export const routes = [
     },
     component: () => import('~/views/Day35_ImageCarousel/index.vue'),
   },
+  {
+    path: '/day36',
+    name: 'day36',
+    meta: {
+      title: 'Hover Board',
+    },
+    component: () => import('~/views/Day36_HoverBoard/index.vue'),
+  },
+  {
+    path: '/day37',
+    name: 'day37',
+    meta: {
+      title: 'Pokedex',
+    },
+    component: () => import('~/views/Day37_Pokedex/index.vue'),
+  },
+  {
+    path: '/day38',
+    name: 'day38',
+    meta: {
+      title: 'Mobile Tab Navigation',
+    },
+    component: () => import('~/views/Day38_MobileTabNavigation/index.vue'),
+  },
+  {
+    path: '/day39',
+    name: 'day39',
+    meta: {
+      title: 'Password Strength Background',
+    },
+    component: () => import('~/views/Day39_PasswordStrengthBackground/index.vue'),
+  },
 ]
 
 export const router = createRouter({
