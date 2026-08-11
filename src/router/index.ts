@@ -163,6 +163,38 @@ export const routes = [
     },
     component: () => import('~/views/Day17_MovieApp/index.vue'),
   },
+  {
+    path: '/day18',
+    name: 'day18',
+    meta: {
+      title: 'Background Slider',
+    },
+    component: () => import('~/views/Day18_BackgroundSlider/index.vue'),
+  },
+  {
+    path: '/day19',
+    name: 'day19',
+    meta: {
+      title: 'Theme Clock',
+    },
+    component: () => import('~/views/Day19_ThemeClock/index.vue'),
+  },
+  {
+    path: '/day20',
+    name: 'day20',
+    meta: {
+      title: 'Button Ripple Effect',
+    },
+    component: () => import('~/views/Day20_ButtonRippleEffect/index.vue'),
+  },
+  {
+    path: '/day21',
+    name: 'day21',
+    meta: {
+      title: 'Drag N Drop',
+    },
+    component: () => import('~/views/Day21_DragNDrop/index.vue'),
+  },
 ]
 
 export const router = createRouter({

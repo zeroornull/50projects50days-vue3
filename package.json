@@ -27,6 +27,7 @@
     "deps:check:json": "taze major -r --exclude typescript@7 --json"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
     "@types/mockjs": "^1.0.10",
     "axios": "^1.19.0",
     "dayjs": "^1.11.21",
