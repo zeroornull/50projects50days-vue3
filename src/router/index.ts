@@ -243,6 +243,38 @@ export const routes = [
     },
     component: () => import('~/views/Day27_ToastNotification/index.vue'),
   },
+  {
+    path: '/day28',
+    name: 'day28',
+    meta: {
+      title: 'Github Profiles',
+    },
+    component: () => import('~/views/Day28_GithubProfiles/index.vue'),
+  },
+  {
+    path: '/day29',
+    name: 'day29',
+    meta: {
+      title: 'Double Click Heart',
+    },
+    component: () => import('~/views/Day29_DoubleClickHeart/index.vue'),
+  },
+  {
+    path: '/day30',
+    name: 'day30',
+    meta: {
+      title: 'Auto Text Effect',
+    },
+    component: () => import('~/views/Day30_AutoTextEffect/index.vue'),
+  },
+  {
+    path: '/day31',
+    name: 'day31',
+    meta: {
+      title: 'Password Generator',
+    },
+    component: () => import('~/views/Day31_PasswordGenerator/index.vue'),
+  },
 ]
 
 export const router = createRouter({
