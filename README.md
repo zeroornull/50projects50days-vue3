@@ -40,3 +40,26 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## GitHub Pages
+
+The repository includes a GitHub Actions workflow at
+`.github/workflows/deploy-pages.yml`. It runs on every push to `master`, builds
+the site, and publishes the `dist/` directory through GitHub Pages.
+
+1. Open **Settings → Pages** in the GitHub repository.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Push to `master` (or run the workflow manually from the **Actions** tab).
+
+For this repository, the published site will be available at:
+
+<https://zeroornull.github.io/50projects50days-vue3/>
+
+The Vite base path is derived from `GITHUB_REPOSITORY` in CI, while local
+development keeps the root path (`/`). The Vue Router history uses the same
+base path, and the build creates `404.html` so direct links to routes such as
+`/day37` continue to work on GitHub Pages.
+
+If the site is later served from a custom domain, set `VITE_BASE_PATH=/` in the
+workflow (or in the build environment) so assets are emitted relative to the
+domain root.

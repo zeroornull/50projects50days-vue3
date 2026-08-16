@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-  baseURL: '/',
+  baseURL: import.meta.env.BASE_URL,
   timeout: 10000,
   headers: {
     Accept: 'application/json',
