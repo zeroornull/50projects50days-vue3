@@ -34,7 +34,12 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          cat > pnpm-workspace.yaml <<'EOF'
+          allowBuilds:
+            '@parcel/watcher': true
+          EOF
+          pnpm install --frozen-lockfile
 
       - name: Build site
         run: pnpm build:pages
